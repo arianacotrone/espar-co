@@ -170,6 +170,14 @@ h2.on-dark { color: var(--white); }
 .portfolio-body p { font-size: 14.5px; margin-bottom: 14px; }
 .link-arrow { color: var(--cyan); font-weight: 700; font-size: 14.5px; }
 .link-arrow:hover { text-decoration: underline; }
+/* Fuerza a la imagen a llenar exactamente el contenedor sin dejar espacios */
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen prolijamente para cubrir todo el recuadro */
+  object-position: center top; /* Alinea la captura desde arriba para no cortar títulos */
+  display: block;
+}
 
 /* ============================================
    Quiénes somos
