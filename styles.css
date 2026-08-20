@@ -116,6 +116,22 @@ h2.on-dark { color: var(--white); }
 .hero-visual .bar-2 { width: 92%; background: rgba(255,255,255,0.65); }
 .hero-visual .bar-3 { width: 60%; background: rgba(255,255,255,0.4); }
 
+.brand-name {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.brand-espar {
+  color: #0b2d6b;
+}
+
+.brand-co {
+  color: #12a9e8;
+}
+
 /* ============================================
    Servicios
    ============================================ */
