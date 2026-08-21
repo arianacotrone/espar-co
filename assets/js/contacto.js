@@ -2,7 +2,7 @@
 // No envía ni guarda nada en un servidor: solo abre wa.me con el texto precargado.
 (function () {
   // TODO: reemplazá por tu número real de WhatsApp (formato 549 + código de área sin 0 + número sin 15)
-  var WHATSAPP_NUMBER = '5490000000000';
+  var WHATSAPP_NUMBER = '5491141889724';
 
   document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('contacto-form');
