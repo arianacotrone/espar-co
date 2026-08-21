@@ -1,204 +1,301 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-AR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Espar Co. — Data and Business Solutions</title>
-<meta name="description" content="Espar Co. transforma datos complejos en decisiones de negocio claras, accionables y medibles. Extracción de datos, Data Science, Business Intelligence y optimización de procesos.">
+<meta name="description" content="Espar Co.: transformación de datos en insights estratégicos. Diseño de soluciones end-to-end, de la extracción SQL al dashboard ejecutivo en Power BI o Tableau.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Espar Co. — Data and Business Solutions">
-<meta property="og:description" content="Transformamos datos complejos en decisiones de negocio claras, accionables y medibles.">
-<meta property="og:type" content="website">
-
-<link rel="icon" type="image/png" href="assets/logo-icon.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<header class="site-header" id="top">
-  <div class="container header-inner">
-    <a href="#top" class="brand" aria-label="Espar Co. — inicio">
-      <img src="assets/Version grande.png" alt="Espar Co." class="brand-icon">
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container">
+    <a class="logo-link" href="/" aria-label="Espar Co. — inicio">
+      <img src="assets/img/logo.png" alt="Espar Co. — Data and Business Solutions">
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="main-nav" id="mainNav">
-      <a href="#servicios">Servicios</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#nosotros">Quiénes somos</a>
-      <a href="#contacto" class="nav-cta">Contacto</a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="#servicios">Servicios</a>
+      <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+      <a class="nav-link" href="#portafolio">Portafolio</a>
+      <a class="nav-link" href="#contacto">Contacto</a>
     </nav>
+
+    <div class="header-actions">
+      <div class="social-icons">
+        <!-- TODO: reemplazar # por tus URLs reales -->
+        <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+      </div>
+      <a class="btn-outline btn-sm" href="#portafolio">Ver portafolio</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Buenos Aires, Argentina</p>
-        <h1 class="brand-name">
-          <span class="brand-espar">Espar Co.</span>
-        </h1>
-        <p class="hero-tagline">Data and Business Solutions</p>
-        <p class="hero-desc">Transformamos datos complejos en decisiones de negocio claras, accionables y medibles.</p>
-        <a href="#contacto" class="btn btn-primary">Hablemos</a>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="servicios">
+    <div class="container">
+
+      <div>
+        <div class="eyebrow">Data &amp; Business Solutions</div>
+        <h1>Convertimos datos dispersos en decisiones ejecutivas</h1>
+        <p class="lede">
+          Diseño soluciones de datos end-to-end — desde la extracción en SQL hasta el dashboard ejecutivo —
+          con foco en el valor de negocio, no solo en el modelo. Ingeniería Industrial aplicada a datos reales.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#portafolio">
+            Ver portafolio
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a class="btn-outline" href="#contacto">Agendemos una llamada</a>
+        </div>
+        <div class="hero-byline">
+          <span class="avatar-badge">AE</span>
+          <div class="hero-byline-text">
+            <strong>Ariana España</strong> · Ingeniera Industrial, Founder @ Espar Co.
+          </div>
+        </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <span class="hero-visual-label">Data / Decision</span>
-        <div class="bar bar-1"></div>
-        <div class="bar bar-2"></div>
-        <div class="bar bar-3"></div>
+
+      <div class="hero-visual">
+        <div class="hero-visual-main">
+          <img src="assets/img/hero-main.webp" alt="Dashboard de analítica de datos con visualizaciones de KPIs">
+        </div>
+        <div class="hero-visual-detail">
+          <img src="assets/img/hero-detail.jpg" alt="Equipo analizando reportes financieros en laptop">
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">+700</div>
+          <div class="hero-stat-label">empleados impactados en un rediseño de proceso en 30+ países</div>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <div class="container"><hr class="divider"></div>
-
-  <!-- SERVICIOS -->
-  <section class="services" id="servicios">
+  <!-- ===== PORTAFOLIO PREVIEW ===== -->
+  <section class="section-portfolio" id="portafolio">
     <div class="container">
-      <p class="eyebrow">Servicios</p>
-      <h2>Del dato crudo a la decisión.</h2>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="24" cy="10" rx="16" ry="6" stroke="#00A7F1" stroke-width="2.4"/>
-            <path d="M8 10V24C8 27.3 15.2 30 24 30C32.8 30 40 27.3 40 24V10" stroke="#00A7F1" stroke-width="2.4"/>
-            <path d="M8 24V38C8 41.3 15.2 44 24 44C32.8 44 40 41.3 40 38V24" stroke="#00A7F1" stroke-width="2.4"/>
-          </svg>
-          <h3>Extracción y gestión de datos</h3>
-          <p>SQL, bases relacionales y fuentes de datos listas para trabajar.</p>
+      <div class="section-top">
+        <div>
+          <div class="eyebrow" style="margin-bottom:14px;">Portafolio</div>
+          <h2 class="section-heading">Proyectos con rigor técnico y foco de negocio</h2>
         </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 34L17 22L25 29L42 10" stroke="#00A7F1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M31 10H42V21" stroke="#00A7F1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M6 40H42" stroke="#00A7F1" stroke-width="2.4" stroke-linecap="round"/>
-          </svg>
-          <h3>Procesamiento y Data Science</h3>
-          <p>R, Python, ETL y modelado estadístico para convertir datos en valor.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="26" width="7" height="14" rx="1.5" stroke="#00A7F1" stroke-width="2.4"/>
-            <rect x="20.5" y="16" width="7" height="24" rx="1.5" stroke="#00A7F1" stroke-width="2.4"/>
-            <rect x="35" y="8" width="7" height="32" rx="1.5" stroke="#00A7F1" stroke-width="2.4"/>
-          </svg>
-          <h3>Visualización y BI</h3>
-          <p>Power BI, Tableau y dashboards ejecutivos para una lectura clara.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="17" stroke="#00A7F1" stroke-width="2.4"/>
-            <circle cx="24" cy="24" r="9.5" stroke="#00A7F1" stroke-width="2.4"/>
-            <circle cx="24" cy="24" r="2.5" fill="#00A7F1"/>
-          </svg>
-          <h3>Optimización de procesos</h3>
-          <p>Automatización y eficiencia operativa para escalar el negocio.</p>
-        </div>
+        <p>Una muestra de casos reales, de la extracción de datos al resultado ejecutivo.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- PORTAFOLIO -->
-  <section class="portfolio" id="portafolio">
-    <div class="container">
-      <p class="eyebrow eyebrow-light">Portafolio</p>
-      <h2 class="on-dark">Proyectos con impacto medible.</h2>
+      <div class="project-grid">
 
-      <div class="portfolio-grid">
-        <article class="portfolio-card">
-          <div class="portfolio-media">
-            <img src="assets/cortes-enre_portada.jpg" alt="Cortes ENRE" class="portfolio-img">
+        <!-- Card 1: Tenaris -->
+        <article class="card project-card">
+          <div class="badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9v.01"></path><path d="M9 12v.01"></path><path d="M9 15v.01"></path><path d="M9 18v.01"></path></svg>
           </div>
-          <div class="portfolio-body">
-            <h3>cortes-enre</h3>
-            <p>Pipeline automatizado para monitorear cortes eléctricos en AMBA con datos públicos del ENRE, actualizado cada 2 horas vía GitHub Actions.</p>
-            <a href="https://github.com/arianacotrone/cortes-enre" target="_blank" rel="noopener" class="link-arrow">Ver en GitHub →</a>
+          <div><span class="pill pill-industry">Corporativo</span></div>
+          <h3>Optimización de un programa de capacitación corporativa</h3>
+          <p class="client">Tenaris</p>
+          <p class="desc">
+            Rediseño integral de la gestión de un programa de idiomas para +700 empleados en 30+ países: de
+            planillas manuales a un tablero interactivo en Power BI con comunicaciones automatizadas.
+          </p>
+          <div class="tools">
+            <span class="pill pill-tool">Power BI</span>
+            <span class="pill pill-tool">Excel</span>
+            <span class="pill pill-tool">Power Automate</span>
           </div>
+          <a class="case-link" href="proyectos/#tenaris">
+            Ver caso
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </article>
 
-        <article class="portfolio-card">
-          <div class="portfolio-media">
-            <img src="assets/sistderec_portada.jpg" alt="Cortes ENRE" class="portfolio-img">
+        <!-- Card 2: SistDeRec -->
+        <article class="card project-card">
+          <div class="badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
           </div>
-          <div class="portfolio-body">
-            <h3>SistDeRec</h3>
-            <p>Sistema de recomendación de libros en dos etapas: generación de candidatos y reranking con CatBoost. 1er puesto en competencia interna.</p>
-            <a href="https://github.com/arianacotrone/SistDeRec" target="_blank" rel="noopener" class="link-arrow">Ver en GitHub →</a>
+          <div><span class="pill pill-industry">Educación / Tech</span></div>
+          <h3>Sistema de recomendación en dos etapas</h3>
+          <p class="client">ITBA — Maestría en Ciencia de Datos</p>
+          <p class="desc">
+            Generación de candidatos desde 4 fuentes + reranking con CatBoostRanker sobre 23 features — la
+            misma arquitectura que un modelo de scoring o predicción de abandono de clientes.
+          </p>
+          <div class="tools">
+            <span class="pill pill-tool">Python</span>
+            <span class="pill pill-tool">Machine Learning</span>
+            <span class="pill pill-tool">CatBoost</span>
           </div>
+          <a class="case-link" href="https://github.com/arianacotrone/SistDeRec" target="_blank" rel="noopener">
+            Ver repositorio
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </article>
+
+        <!-- Card 3: cortes-enre -->
+        <article class="card project-card">
+          <div class="badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <div><span class="pill pill-industry">Energía / Utilities</span></div>
+          <h3>Pipeline de monitoreo de cortes de energía (AMBA)</h3>
+          <p class="client">Proyecto propio — Espar Co.</p>
+          <p class="desc">
+            Scraping automatizado del mapa público de cortes del ENRE (Edesur y Edenor) cada 2 horas, vía
+            GitHub Actions, sin intervención manual.
+          </p>
+          <div class="tools">
+            <span class="pill pill-tool">Python</span>
+            <span class="pill pill-tool">Web Scraping</span>
+            <span class="pill pill-tool">GitHub Actions</span>
+          </div>
+          <a class="case-link" href="proyectos/#cortes-enre">
+            Ver caso
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="portfolio-cta">
+        <a class="btn-primary" href="proyectos/">
+          Ver todos los proyectos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- QUIÉNES SOMOS -->
-  <section class="about" id="nosotros">
-    <div class="container about-grid">
-      <div class="about-photo" aria-hidden="true">
-        <span>Foto / Ariana</span>
-      </div>
-      <div class="about-copy">
-        <p class="eyebrow">Quiénes somos</p>
-        <h2>Ariana España Cotrone</h2>
-        <p class="about-role">Fundadora · Ingeniera Industrial (UTN) · Especialización en Data Science (ITBA)</p>
-        <p class="about-desc">Espar Co. combina pensamiento de negocio y rigor analítico para transformar datos en insights estratégicos y soluciones end-to-end: desde la extracción y el modelado hasta la visualización ejecutiva.</p>
-      </div>
-    </div>
-  </section>
+  <!-- ===== SOBRE MÍ ===== -->
+  <section class="section-about" id="sobre-mi">
+    <div class="container">
 
-  <!-- CONTACTO -->
-  <section class="contact" id="contacto">
-    <div class="container contact-grid">
-      <div class="contact-copy">
-        <p class="eyebrow eyebrow-light">Contacto</p>
-        <h2 class="on-dark">Hablemos de tu próximo proyecto.</h2>
-        <p class="contact-desc">Contame qué desafío querés resolver y diseñemos una solución basada en datos.</p>
-        <div class="social-links">
-          <a href="https://github.com/arianacotrone" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.02 1.76 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/arianaecotrone" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.48v6.26ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
-          </a>
+      <div class="about-photo-wrap">
+        <div class="about-photo-accent"></div>
+        <!--
+          TODO: cuando tengas tu foto, reemplazá el bloque de abajo por:
+          <div class="about-photo"><img src="assets/img/ariana.jpg" alt="Ariana España, Founder de Espar Co."></div>
+        -->
+        <div class="about-photo is-placeholder">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--gray)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Foto profesional<br>pendiente</span>
         </div>
       </div>
 
-      <form class="contact-form" id="contactForm">
-        <label class="sr-only" for="name">Nombre</label>
-        <input type="text" id="name" name="name" placeholder="Nombre" required>
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px;">Sobre mí</div>
+        <h2 class="section-heading">De Tenaris y Presidencia de la Nación a fundar Espar Co.</h2>
+        <p class="about-copy">
+          Soy Ariana España, Ingeniera Industrial (UTN) y estoy terminando la Especialización en Ciencia de
+          Datos del ITBA. Antes de fundar Espar Co. trabajé con grandes volúmenes de datos en organizaciones
+          de escalas muy distintas — de una multinacional siderúrgica al sector público — y esa mezcla es la
+          que traigo a cada proyecto: rigor técnico con foco en lo que el negocio necesita decidir.
+        </p>
 
-        <label class="sr-only" for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot-col"><span class="timeline-dot"></span><span class="timeline-line"></span></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Ingeniería Industrial — UTN</div>
+              <div class="timeline-meta">Formación de base</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-col"><span class="timeline-dot"></span><span class="timeline-line"></span></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Tenaris</div>
+              <div class="timeline-meta">~2 años</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-col"><span class="timeline-dot"></span><span class="timeline-line"></span></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Quilmes</div>
+              <div class="timeline-meta">6 meses</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-col"><span class="timeline-dot"></span><span class="timeline-line"></span></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Presidencia de la Nación</div>
+              <div class="timeline-meta">~2 años · grandes volúmenes de datos</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-col"><span class="timeline-dot is-last"></span></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Founder — Espar Co.</div>
+              <div class="timeline-meta">Especialización en Ciencia de Datos, ITBA (en curso)</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <label class="sr-only" for="message">Mensaje</label>
-        <textarea id="message" name="message" placeholder="Mensaje" rows="5" required></textarea>
-
-        <button type="submit" class="btn btn-primary btn-block">Enviar consulta</button>
-        <p class="form-note" id="formNote" role="status"></p>
-      </form>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>Espar Co. · Data &amp; Business Solutions</p>
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="contacto">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Espar <span>Co.</span></div>
+      <p class="footer-tagline">
+        Data and Business Solutions. Transformación de datos en insights estratégicos para decisiones de negocio.
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navegación</div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="proyectos/">Portafolio</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contacto</div>
+      <!-- TODO: reemplazar por el email de Espar Co. cuando esté creado -->
+      <p class="footer-contact-email">[tu@email.com]</p>
+      <div class="footer-social">
+        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Espar Co. — Data and Business Solutions.</p>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
