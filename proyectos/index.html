@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio — Espar Co.</title>
+<meta name="description" content="Todos los proyectos de Espar Co. Filtrá por industria o por herramienta: SQL, Python, R, Power BI, Tableau.">
+
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container">
+    <a class="logo-link" href="/" aria-label="Espar Co. — inicio">
+      <img src="../assets/img/logo.png" alt="Espar Co. — Data and Business Solutions">
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="/">Inicio</a>
+      <a class="nav-link" href="/#servicios">Servicios</a>
+      <a class="nav-link" href="/#sobre-mi">Sobre mí</a>
+      <span class="nav-link is-active">Portafolio</span>
+      <a class="nav-link" href="/#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="social-icons">
+        <!-- TODO: reemplazar # por tus URLs reales -->
+        <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <div class="eyebrow">Portafolio</div>
+      <h1>Todos los proyectos</h1>
+      <p>Filtrá por industria o por herramienta para explorar los casos.</p>
+    </div>
+  </section>
+
+  <!-- ===== FILTERS ===== -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-panel">
+        <div>
+          <div class="filter-label">Industria</div>
+          <div class="chip-row">
+            <button class="chip is-active" data-filter-group="industry" data-filter-value="Todas">Todas</button>
+            <button class="chip" data-filter-group="industry" data-filter-value="Corporativo">Corporativo</button>
+            <button class="chip" data-filter-group="industry" data-filter-value="Educación">Educación</button>
+            <button class="chip" data-filter-group="industry" data-filter-value="Energía">Energía</button>
+          </div>
+        </div>
+        <div>
+          <div class="filter-label">Herramienta</div>
+          <div class="chip-row">
+            <button class="chip is-active" data-filter-group="tool" data-filter-value="Todas">Todas</button>
+            <button class="chip" data-filter-group="tool" data-filter-value="Power BI">Power BI</button>
+            <button class="chip" data-filter-group="tool" data-filter-value="Python">Python</button>
+            <button class="chip" data-filter-group="tool" data-filter-value="Machine Learning">Machine Learning</button>
+            <button class="chip" data-filter-group="tool" data-filter-value="Web Scraping">Web Scraping</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS ===== -->
+  <section class="results-section">
+    <div class="container">
+      <p class="results-count"><span class="results-visible">3</span> de <span class="results-total">3</span> proyectos</p>
+
+      <div class="project-grid">
+
+        <!-- Card 1: Tenaris -->
+        <article class="card project-card" id="tenaris" data-industry="Corporativo" data-tools="Power BI,Excel,Power Automate">
+          <div class="badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9v.01"></path><path d="M9 12v.01"></path><path d="M9 15v.01"></path><path d="M9 18v.01"></path></svg>
+          </div>
+          <div><span class="pill pill-industry">Corporativo</span></div>
+          <h3>Optimización de un programa de capacitación corporativa</h3>
+          <p class="client">Tenaris</p>
+          <p class="desc">
+            Rediseño integral de la gestión de un programa de idiomas para +700 empleados en 30+ países: de
+            planillas manuales a un tablero interactivo en Power BI con comunicaciones automatizadas.
+          </p>
+          <div class="tools">
+            <span class="pill pill-tool">Power BI</span>
+            <span class="pill pill-tool">Excel</span>
+            <span class="pill pill-tool">Power Automate</span>
+          </div>
+          <a class="case-link" href="#tenaris">
+            Ver caso
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+        <!-- Card 2: SistDeRec -->
+        <article class="card project-card" id="sistderec" data-industry="Educación" data-tools="Python,Machine Learning">
+          <div class="badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div><span class="pill pill-industry">Educación</span></div>
+          <h3>Sistema de recomendación en dos etapas</h3>
+          <p class="client">ITBA — Maestría en Ciencia de Datos</p>
+          <p class="desc">
+            Generación de candidatos desde 4 fuentes + reranking con CatBoostRanker sobre 23 features — la
+            misma arquitectura que un modelo de scoring o predicción de abandono de clientes.
+          </p>
+          <div class="tools">
+            <span class="pill pill-tool">Python</span>
+            <span class="pill pill-tool">Machine Learning</span>
+            <span class="pill pill-tool">CatBoost</span>
+          </div>
+          <a class="case-link" href="https://github.com/arianacotrone/SistDeRec" target="_blank" rel="noopener">
+            Ver repositorio
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+        <!-- Card 3: cortes-enre -->
+        <article class="card project-card" id="cortes-enre" data-industry="Energía" data-tools="Python,Web Scraping">
+          <div class="badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <div><span class="pill pill-industry">Energía</span></div>
+          <h3>Pipeline de monitoreo de cortes de energía (AMBA)</h3>
+          <p class="client">Proyecto propio — Espar Co.</p>
+          <p class="desc">
+            Scraping automatizado del mapa público de cortes del ENRE (Edesur y Edenor) cada 2 horas, vía
+            GitHub Actions, sin intervención manual.
+          </p>
+          <div class="tools">
+            <span class="pill pill-tool">Python</span>
+            <span class="pill pill-tool">Web Scraping</span>
+            <span class="pill pill-tool">GitHub Actions</span>
+          </div>
+          <a class="case-link" href="#cortes-enre">
+            Ver caso
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="no-results">
+        <p>No hay proyectos con esa combinación de filtros todavía.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="contacto">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Espar <span>Co.</span></div>
+      <p class="footer-tagline">
+        Data and Business Solutions. Transformación de datos en insights estratégicos para decisiones de negocio.
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navegación</div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/#servicios">Servicios</a>
+        <a href="/#sobre-mi">Sobre mí</a>
+        <a href="/proyectos/">Portafolio</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contacto</div>
+      <!-- TODO: reemplazar por el email de Espar Co. cuando esté creado -->
+      <p class="footer-contact-email">[tu@email.com]</p>
+      <div class="footer-social">
+        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Espar Co. — Data and Business Solutions.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/proyectos.js"></script>
+</body>
+</html>
