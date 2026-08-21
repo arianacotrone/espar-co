@@ -133,7 +133,7 @@ a:hover { color: var(--navy); }
   gap: 24px;
 }
 .logo-link { display: block; flex-shrink: 0; }
-.logo-link img { height: 32px; width: auto; }
+.logo-link img { height: 42px; width: auto; }
 
 .main-nav {
   display: flex;
