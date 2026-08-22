@@ -9,8 +9,8 @@ Sitio estático (HTML/CSS/JS puro, sin framework ni build step) de **esparco.com
 | Dominio | **esparco.com.ar** |
 | Alojamiento / DNS | **Cloudflare** — [dashboard del dominio](https://dash.cloudflare.com/f7e837d2e42f8b8c70339f9bd32ef082/domains/overview) |
 | Repositorio | GitHub, usuario `arianacotrone` — https://github.com/arianacotrone/espar-co/tree/main |
-| WhatsApp del formulario y del botón flotante | `+54 9 11 4188-9724` (`5491141889724` en `assets/js/contacto.js` e `index.html`) — **confirmá que sea el número correcto**, quedó como estaba en el original |
-| Email de contacto (footer) | `hola@esparco.com.ar` — **confirmá que esta casilla exista** antes de publicar, o reemplazala por la que uses |
+| WhatsApp del formulario y del botón flotante | `+54 9 11 4188-9724` (`5491141889724` en `assets/js/contacto.js` e `index.html`) |
+| Email de contacto (footer) | @@@`|
 | LinkedIn | https://www.linkedin.com/in/arianaecotrone/ |
 | GitHub | https://github.com/arianacotrone |
 | Instagram | https://www.instagram.com/esparco.data/ |
