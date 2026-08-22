@@ -550,19 +550,48 @@ a:hover { color: var(--navy); }
   position: fixed;
   right: 24px;
   bottom: 24px;
-  width: 58px;
   height: 58px;
+  min-width: 58px;
   border-radius: 999px;
   background: #25D366;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(2, 38, 96, .28);
+  z-index: 60;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.fab-whatsapp:hover,
+.fab-whatsapp:focus-visible {
+  transform: scale(1.03);
+  box-shadow: 0 14px 30px rgba(2, 38, 96, .34);
+}
+.fab-whatsapp-icon-wrap {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 24px rgba(2, 38, 96, .28);
-  z-index: 60;
-  transition: transform .15s ease;
 }
-.fab-whatsapp:hover { transform: scale(1.06); }
 .fab-whatsapp-icon { width: 28px; height: 28px; }
+.fab-whatsapp-label {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  transition: max-width .3s ease, opacity .2s ease .05s, padding-right .3s ease;
+}
+.fab-whatsapp:hover .fab-whatsapp-label,
+.fab-whatsapp:focus-visible .fab-whatsapp-label {
+  max-width: 220px;
+  opacity: 1;
+  padding-right: 20px;
+}
 
 /* ============================================================
    FOOTER
@@ -575,7 +604,17 @@ a:hover { color: var(--navy); }
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, .14);
 }
-.footer-brand { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+.footer-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  transition: opacity .15s ease;
+}
+.footer-brand-link:hover { opacity: .8; }
+.footer-brand-icon { height: 26px; width: auto; }
+.footer-brand { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 0; }
 .footer-brand span { color: var(--cyan); }
 .footer-tagline { font-size: 13.5px; color: rgba(255, 255, 255, .62); line-height: 1.7; max-width: 280px; margin: 0; }
 .footer-col-title {
@@ -709,5 +748,6 @@ a:hover { color: var(--navy); }
   .page-header h1 { font-size: 30px; }
   .section-contact { padding: 64px 0; }
   .form-card { padding: 24px; }
-  .fab-whatsapp { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+  .fab-whatsapp { right: 16px; bottom: 16px; height: 52px; min-width: 52px; }
+  .fab-whatsapp-icon-wrap { width: 52px; height: 52px; }
 }
