@@ -352,6 +352,19 @@ a:hover { color: var(--navy); }
 .services-note strong { font-weight: 700; }
 
 /* ============================================================
+   DESARROLLO WEB PARA COMERCIOS — línea secundaria (home)
+   ============================================================ */
+.section-webdev { padding: 100px 0; background: var(--bg-soft); }
+.section-webdev .section-top { margin-bottom: 48px; max-width: 720px; }
+.section-webdev .section-top p { font-size: 16px; color: var(--gray); line-height: 1.7; margin: 18px 0 0; }
+.phase-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 700px;
+}
+
+/* ============================================================
    PORTFOLIO PREVIEW (home) + FULL GRID (proyectos)
    ============================================================ */
 .section-portfolio { padding: 100px 0; background: var(--bg-soft); }
