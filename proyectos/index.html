@@ -87,6 +87,8 @@
             <button class="chip" data-filter-group="tool" data-filter-value="Web Scraping">Web Scraping</button>
             <button class="chip" data-filter-group="tool" data-filter-value="Desarrollo Web">Desarrollo Web</button>
             <button class="chip" data-filter-group="tool" data-filter-value="E-commerce">E-commerce</button>
+            <button class="chip" data-filter-group="tool" data-filter-value="Excel">Excel</button>
+            <button class="chip" data-filter-group="tool" data-filter-value="Automatización">Automatización</button>
           </div>
         </div>
       </div>
@@ -100,27 +102,6 @@
 
       <div class="project-grid">
 
-        <!-- Card destacada: reemplazar por tu primer caso PyME real en cuanto lo tengas.
-             No tiene data-industry a propósito, para que quede siempre visible sin importar el filtro.
-             Ver recomendaciones de proyectos a construir en consultoria/proyectos-de-portafolio.md 
-        <article class="card project-card is-placeholder">
-          <div class="badge-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
-          </div>
-          <div><span class="pill pill-todo">Próximamente</span></div>
-          <h3>Tu primer caso PyME va acá</h3>
-          <p class="client">Ej: metalúrgica, alimenticia, textil o logística — 10 a 80 empleados</p>
-          <p class="desc">
-            Reemplazá esta tarjeta por tu primer caso de Fase 0-2: de datos dispersos en Excel a una
-            base ordenada y un tablero con alertas.
-          </p>
-          <div class="tools">
-            <span class="pill pill-tool">Fase 0-1</span>
-            <span class="pill pill-tool">Fase 2</span>
-          </div>
-        </article>
-        -->
-
         <!-- Card 1: Tenaris -->
         <article class="card project-card" data-industry="Corporativo" data-tools="Power BI,Excel">
           <div class="badge-icon">
@@ -131,9 +112,10 @@
           <p class="client">Tenaris — programa de capacitación corporativa</p>
           <p class="desc">
             Mismo problema que tiene cualquier PyME, a otra escala: un proceso que se gestionaba a mano
-            en planillas sueltas, sin nadie con una vista completa. Fué pasado a una base de datos ordenada
-            con un tablero interactivo y alertas automáticas — Fase 1 y 2 aplicadas a +700 personas en 30+ países.
+            en planillas sueltas, sin nadie con una vista completa. Se pasó a una base de datos ordenada
+            con un tablero interactivo y alertas automáticas.
           </p>
+          <div class="project-stat">+700 personas · 30+ países capacitados con el mismo tablero</div>
           <div class="tools">
             <span class="pill pill-tool">Power BI</span>
             <span class="pill pill-tool">Excel</span>
@@ -180,9 +162,9 @@
           <p class="desc">
             Antes había que entrar al mapa del ENRE y revisarlo manualmente. Armé un proceso que lo hace
             solo cada 2 horas, sin que nadie tenga que acordarse — el mismo tipo de automatización que se le
-            puede construir a una PyME para que deje de revisar información a mano todos los días, lo que posteriormente ayuda a identificar tendencias y
-            hacer predicciones.
+            puede construir a una PyME para que deje de revisar información a mano todos los días.
           </p>
+          <div class="project-stat">+169.000 lecturas procesadas automáticamente, sin intervención manual</div>
           <div class="tools">
             <span class="pill pill-tool">Python</span>
             <span class="pill pill-tool">Web Scraping</span>
@@ -216,6 +198,26 @@
             Ver sitio
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
+        </article>
+
+        <!-- Card: Automatización de facturación (Faryco) -->
+        <article class="card project-card is-placeholder" data-industry="Comercio" data-tools="Excel,Automatización">
+          <div class="badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="7" x2="16" y2="7"></line><line x1="8" y1="11" x2="16" y2="11"></line><line x1="8" y1="15" x2="12" y2="15"></line></svg>
+          </div>
+          <div><span class="pill pill-industry">Comercio</span></div>
+          <div><span class="pill pill-todo">Próximamente</span></div>
+          <h3>De cargar la facturación a mano, comprobante por comprobante, a una foto y un clic</h3>
+          <p class="client">Faryco — Farenheite Calzada</p>
+          <p class="desc">
+            Hoy la facturación se anota a mano y se carga una por una. La idea: sacarle una foto a cada comprobante,
+            que el texto se vuelque solo a una planilla, una revisión rápida antes de confirmar, y un script que
+            factura todo de una vez.
+          </p>
+          <div class="tools">
+            <span class="pill pill-tool">Excel</span>
+            <span class="pill pill-tool">Automatización</span>
+          </div>
         </article>
 
         <!-- Card 5: España Cotrone (desarrollo web — servicios profesionales) -->
