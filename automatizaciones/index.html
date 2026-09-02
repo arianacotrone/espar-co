@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automatización de tareas en Excel — Espar Co.</title>
+<meta name="description" content="Espar Co.: automatización puntual de tareas repetitivas en Excel para contadores, inmobiliarias y oficinas administrativas chicas. Sin licencias nuevas, sin abono mensual.">
+
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.section-problem { padding: 100px 0; background: var(--white); }
+.section-problem .section-top { margin-bottom: 48px; max-width: 720px; }
+.section-problem .section-top p { font-size: 16px; color: var(--gray); line-height: 1.7; margin: 18px 0 0; }
+.problem-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.problem-card { padding: 26px 22px; display: flex; flex-direction: column; gap: 14px; }
+.problem-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 0; line-height: 1.3; }
+.problem-card p { font-size: 13.5px; color: var(--gray); line-height: 1.6; margin: 0; }
+.phase-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.section-audience { padding: 100px 0; background: var(--bg-soft); }
+.section-audience .section-top { margin-bottom: 48px; max-width: 720px; }
+.audience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.audience-card { padding: 26px 22px; display: flex; flex-direction: column; gap: 12px; }
+.audience-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin: 0; }
+.audience-card p { font-size: 13.5px; color: var(--gray); line-height: 1.6; margin: 0; }
+@media (max-width: 780px) { .problem-grid, .audience-grid, .phase-grid-3 { grid-template-columns: 1fr; } }
+@media (max-width: 1080px) and (min-width: 781px) { .problem-grid, .audience-grid, .phase-grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+</style>
+</head>
+<body id="top">
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container">
+    <a class="logo-link" href="../" aria-label="Espar Co. — inicio">
+      <img src="../assets/img/logo-icon.png" alt="">
+      <span class="logo-wordmark">Espar <em>Co.</em></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="#problema">El problema</a>
+      <a class="nav-link" href="#como-funciona">Cómo funciona</a>
+      <a class="nav-link" href="#para-quien">Para quién es</a>
+      <a class="nav-link" href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="social-icons">
+        <a class="icon-btn" href="https://www.linkedin.com/in/arianaecotrone/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a class="icon-btn" href="https://github.com/arianacotrone" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a class="icon-btn" href="https://www.instagram.com/esparco.data/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+      </div>
+      <a class="btn-outline btn-sm" href="#contacto">Contame tu tarea</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+
+      <div>
+        <div class="eyebrow">Para profesionales independientes</div>
+        <h1>Recuperá las horas que perdés armando planillas a mano.</h1>
+        <p class="lede">
+          Automatizo la tarea repetitiva que hacés todas las semanas en Excel — cargas, conciliaciones, reportes,
+          alertas — para que se resuelva con un clic. Sin dashboards, sin fases, sin licencias nuevas: una
+          automatización puntual para un problema puntual.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#contacto">
+            Contame tu tarea
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a class="btn-outline" href="#como-funciona">Cómo funciona</a>
+        </div>
+        <div class="hero-byline">
+          <a href="#para-quien"><span class="avatar-badge">AEC</span></a>
+          <div class="hero-byline-text">
+            <strong>Ariana España Cotrone</strong><br> · Ingeniera Industrial, Founder @ Espar Co.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-panel-figure">
+          <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="De planillas sueltas a una automatización de un clic">
+            <g opacity="0.9">
+              <rect x="34" y="60" width="70" height="52" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="2" transform="rotate(-8 69 86)"></rect>
+              <rect x="40" y="66" width="58" height="6" fill="#E2E8F0" transform="rotate(-8 69 86)"></rect>
+              <rect x="40" y="78" width="40" height="6" fill="#E2E8F0" transform="rotate(-8 69 86)"></rect>
+              <rect x="70" y="130" width="70" height="52" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="2" transform="rotate(6 105 156)"></rect>
+              <rect x="76" y="140" width="58" height="6" fill="#E2E8F0" transform="rotate(6 105 156)"></rect>
+              <rect x="76" y="152" width="30" height="6" fill="#E2E8F0" transform="rotate(6 105 156)"></rect>
+              <rect x="24" y="200" width="70" height="52" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="2" transform="rotate(-4 59 226)"></rect>
+              <rect x="30" y="210" width="58" height="6" fill="#E2E8F0" transform="rotate(-4 59 226)"></rect>
+              <rect x="30" y="222" width="44" height="6" fill="#E2E8F0" transform="rotate(-4 59 226)"></rect>
+            </g>
+            <path d="M158 160 H 230" stroke="#00A7F1" stroke-width="3" stroke-dasharray="6 6"></path>
+            <path d="M222 150 L 236 160 L 222 170" fill="none" stroke="#00A7F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <rect x="320" y="90" width="126" height="140" rx="10" fill="#FFFFFF" stroke="#022660" stroke-width="2.5"></rect>
+            <rect x="336" y="108" width="94" height="8" rx="2" fill="#E2E8F0"></rect>
+            <rect x="336" y="128" width="94" height="8" rx="2" fill="#E2E8F0"></rect>
+            <rect x="336" y="148" width="60" height="8" rx="2" fill="#E2E8F0"></rect>
+            <circle cx="383" cy="192" r="26" fill="#00A7F1"></circle>
+            <path d="M371 192 L 380 201 L 397 182" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="hero-panel-strip">
+          <span class="is-current">Contame la tarea</span>
+          <span class="sep">→</span>
+          <span>Te la automatizo</span>
+          <span class="sep">→</span>
+          <span>La usás cuando quieras</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== EL PROBLEMA ===== -->
+  <section class="section-problem" id="problema">
+    <div class="container">
+      <div class="section-top">
+        <div class="eyebrow" style="margin-bottom:14px;">El problema</div>
+        <h2 class="section-heading">El lunes vuelve a aparecer la misma planilla.</h2>
+        <p>No hace falta un problema grande para que valga la pena resolverlo — solo que se repita todas las semanas.</p>
+      </div>
+
+      <div class="problem-grid">
+        <article class="card problem-card">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3>Cargar y cruzar a mano</h3>
+          <p>Recontar y cruzar datos de varios archivos, todas las semanas, para armar el mismo reporte de siempre.</p>
+        </article>
+        <article class="card problem-card">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+          <h3>Copiar y pegar entre archivos</h3>
+          <p>Consolidar a mano información que ya está en algún sistema, solo que en otro formato.</p>
+        </article>
+        <article class="card problem-card">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <h3>Revisar límites a mano</h3>
+          <p>Chequear manualmente si algo se pasó de un límite (vencimiento, stock, monto) porque nada te avisa solo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO FUNCIONA ===== -->
+  <section class="section-services" id="como-funciona">
+    <div class="container">
+      <div class="section-top">
+        <div class="eyebrow" style="margin-bottom:14px;">Cómo funciona</div>
+        <h2 class="section-heading">Tres pasos, sin licencias nuevas ni abono mensual.</h2>
+        <p>Corre dentro de tu mismo Excel. No hace falta instalar ni pagar nada adicional.</p>
+      </div>
+
+      <div class="phase-grid phase-grid-3">
+        <article class="card phase-card">
+          <div class="phase-num">Paso 1</div>
+          <h3>Me contás la tarea</h3>
+          <p>Una charla corta: qué hacés hoy a mano, con qué archivos, y cuánto tiempo te lleva por semana.</p>
+          <div class="phase-deliverable">Diagnóstico, sin cargo</div>
+        </article>
+        <article class="card phase-card">
+          <div class="phase-num">Paso 2</div>
+          <h3>Te armo la automatización</h3>
+          <p>En días, no semanas. Corre dentro de tu mismo Excel, sin software adicional que tengas que instalar.</p>
+          <div class="phase-deliverable">Automatización lista y probada</div>
+        </article>
+        <article class="card phase-card">
+          <div class="phase-num">Paso 3</div>
+          <h3>La usás cuando quieras</h3>
+          <p>Te la entrego explicada y documentada. Es tuya: no dependés de mí para seguir usándola.</p>
+          <div class="phase-deliverable">Sin abono mensual</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARA QUIÉN ES ===== -->
+  <section class="section-audience" id="para-quien">
+    <div class="container">
+      <div class="section-top">
+        <div class="eyebrow" style="margin-bottom:14px;">Para quién es</div>
+        <h2 class="section-heading">Oficinas chicas con tareas que se repiten cada semana.</h2>
+      </div>
+
+      <div class="audience-grid">
+        <article class="card audience-card">
+          <span class="pill pill-industry" style="align-self:flex-start;">Contadores</span>
+          <h3>Estudios contables</h3>
+          <p>Carga de comprobantes, conciliaciones y reportes mensuales que se repiten cliente por cliente.</p>
+        </article>
+        <article class="card audience-card">
+          <span class="pill pill-industry" style="align-self:flex-start;">Inmobiliarias</span>
+          <h3>Gestión de propiedades</h3>
+          <p>Planillas de propiedades, disponibilidad y clientes que hoy se actualizan a mano.</p>
+        </article>
+        <article class="card audience-card">
+          <span class="pill pill-industry" style="align-self:flex-start;">Oficinas chicas</span>
+          <h3>Administración general</h3>
+          <p>Cualquier control o reporte que se arma igual, semana tras semana, y que nadie automatizó todavía.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section-contact" id="contacto">
+    <div class="container contact-grid">
+
+      <div class="contact-intro">
+        <div class="eyebrow" style="margin-bottom:14px;">Contacto</div>
+        <h2 class="section-heading">¿Hay algo que hacés todas las semanas a mano?</h2>
+        <p class="about-copy" style="max-width:420px;">
+          Completá el formulario y te digo, sin cargo, si tiene sentido automatizarlo.
+        </p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-note">
+          📎 Este formulario arma un mensaje de WhatsApp con los datos que cargues.
+        </div>
+
+        <form id="contacto-form">
+          <div class="field">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+
+          <div class="field">
+            <label for="area">¿Qué tarea querés automatizar?</label>
+            <select id="area" name="area" required>
+              <option value="">Seleccioná una opción</option>
+              <option value="Carga o consolidación de datos">Carga o consolidación de datos</option>
+              <option value="Conciliación de información">Conciliación de información</option>
+              <option value="Armado de reportes periódicos">Armado de reportes periódicos</option>
+              <option value="Alertas automáticas">Alertas automáticas</option>
+              <option value="No estoy segura/o, quiero que me asesoren">No estoy segura/o, quiero que me asesoren</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="detalle">Contanos brevemente tu consulta (opcional)</label>
+            <textarea id="detalle" name="detalle" rows="3" placeholder="Ej: todos los lunes cargo a mano los comprobantes de la semana en una planilla"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+            Enviar por WhatsApp
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+
+          <div class="form-disclaimer">Al enviar, se abre WhatsApp con tus datos precargados en el mensaje. La respuesta y el diagnóstico inicial son sin cargo.</div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-brand-link" href="../" aria-label="Volver arriba">
+        <img src="../assets/img/logo-icon.png" alt="" class="footer-brand-icon">
+        <span class="footer-brand">Espar <span>Co.</span></span>
+      </a>
+      <p class="footer-tagline">
+        Automatización de tareas repetitivas en Excel para oficinas chicas — sin licencias nuevas, sin abono mensual.
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navegación</div>
+      <div class="footer-links">
+        <a href="../">Inicio</a>
+        <a href="#problema">El problema</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#para-quien">Para quién es</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contacto</div>
+      <p class="footer-contact-email">hola@esparco.com.ar</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/arianaecotrone/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://github.com/arianacotrone" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://www.instagram.com/esparco.data/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Espar Co. — Data and Business Solutions.</p>
+  </div>
+</footer>
+
+<a class="fab-whatsapp" href="https://wa.me/5491141889724?text=Hola%2C%20quiero%20automatizar%20una%20tarea%20repetitiva%20en%20Excel" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <span class="fab-whatsapp-icon-wrap">
+    <svg class="fab-whatsapp-icon" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a7.9 7.9 0 0 1-2.3-1.4 8.6 8.6 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.5.5 0 0 0 0-.5c-.1-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 6 6 0 0 0 1.3 3.1 13.6 13.6 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9z"/></svg>
+  </span>
+  <span class="fab-whatsapp-label">Escribinos por WhatsApp</span>
+</a>
+
+<script src="../assets/js/main.js"></script>
+<script>
+(function () {
+  var WHATSAPP_NUMBER = '5491141889724';
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('contacto-form');
+    if (!form) return;
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var nombre = document.getElementById('nombre').value.trim();
+      var area = document.getElementById('area').value;
+      var detalle = document.getElementById('detalle').value.trim();
+      var lineas = [
+        'Hola, quiero automatizar una tarea en Excel.',
+        'Nombre: ' + (nombre || 'Sin especificar'),
+        'Tarea: ' + (area || 'Sin especificar')
+      ];
+      if (detalle) lineas.push('Detalle: ' + detalle);
+      var mensaje = encodeURIComponent(lineas.join('\n'));
+      window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + mensaje, '_blank', 'noopener');
+    });
+  });
+})();
+</script>
+</body>
+</html>
