@@ -11,28 +11,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
-<style>
-.section-problem { padding: 100px 0; background: var(--white); }
-.section-problem .section-top { margin-bottom: 48px; max-width: 720px; }
-.section-problem .section-top p { font-size: 16px; color: var(--gray); line-height: 1.7; margin: 18px 0 0; }
-.problem-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.problem-card { padding: 26px 22px; display: flex; flex-direction: column; gap: 14px; }
-.problem-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 0; line-height: 1.3; }
-.problem-card p { font-size: 13.5px; color: var(--gray); line-height: 1.6; margin: 0; }
-.phase-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.section-audience { padding: 100px 0; background: var(--bg-soft); }
-.section-audience .section-top { margin-bottom: 48px; max-width: 720px; }
-.audience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.audience-card { padding: 26px 22px; display: flex; flex-direction: column; gap: 12px; }
-.audience-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin: 0; }
-.audience-card p { font-size: 13.5px; color: var(--gray); line-height: 1.6; margin: 0; }
-@media (max-width: 780px) { .problem-grid, .audience-grid, .phase-grid-3 { grid-template-columns: 1fr; } }
-@media (max-width: 1080px) and (min-width: 781px) { .problem-grid, .audience-grid, .phase-grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-</style>
+
 </head>
 <body id="top">
 
-<!-- ===== HEADER ===== -->
 <header class="site-header">
   <div class="container">
     <a class="logo-link" href="../" aria-label="Espar Co. — inicio">
@@ -41,10 +23,11 @@
     </a>
 
     <nav class="main-nav" aria-label="Navegación principal">
-      <a class="nav-link" href="#problema">El problema</a>
-      <a class="nav-link" href="#como-funciona">Cómo funciona</a>
-      <a class="nav-link" href="#para-quien">Para quién es</a>
-      <a class="nav-link" href="#contacto">Contacto</a>
+      <a class="nav-link" href="../pymes/">PyMEs</a>
+      <a class="nav-link" href="../comercios/">Comercios de barrio</a>
+      <a class="nav-link is-active" href="../automatizaciones/">Automatización</a>
+      <a class="nav-link" href="../sobre-mi/">Sobre mí</a>
+      <a class="nav-link" href="../proyectos/">Portafolio</a>
     </nav>
 
     <div class="header-actions">
@@ -59,7 +42,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
         </a>
       </div>
-      <a class="btn-outline btn-sm" href="#contacto">Contame tu tarea</a>
+      <a class="btn-outline btn-sm" href="https://wa.me/5491141889724?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Escribime</a>
       <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
@@ -69,11 +52,10 @@
 
 <main>
 
-<!-- ===== HERO ===== -->
   <section class="hero">
     <div class="container">
-
       <div>
+        <a class="back-link" href="../">&larr; Espar Co.</a>
         <div class="eyebrow">Para profesionales independientes</div>
         <h1>Recuperá las horas que perdés armando planillas a mano.</h1>
         <p class="lede">
@@ -82,16 +64,15 @@
           automatización puntual para un problema puntual.
         </p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="#contacto">
-            Contame tu tarea
+          <a class="btn-primary" href="#contacto">Contame tu tarea
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
           <a class="btn-outline" href="#como-funciona">Cómo funciona</a>
         </div>
         <div class="hero-byline">
-          <a href="#para-quien"><span class="avatar-badge">AEC</span></a>
+          <a href="../sobre-mi/"><span class="avatar-badge">AEC</span></a>
           <div class="hero-byline-text">
-            <strong>Ariana España Cotrone</strong><br> · Ingeniera Industrial, Founder @ Espar Co.
+            <a href="../sobre-mi/"><strong>Ariana España Cotrone</strong></a><br> · Ingeniera Industrial, Founder @ Espar Co.
           </div>
         </div>
       </div>
@@ -121,18 +102,14 @@
           </svg>
         </div>
         <div class="hero-panel-strip">
-          <span class="is-current">Contame la tarea</span>
-          <span class="sep">→</span>
-          <span>Te la automatizo</span>
-          <span class="sep">→</span>
+          <span class="is-current">Contame la tarea</span><span class="sep">→</span>
+          <span>Te la automatizo</span><span class="sep">→</span>
           <span>La usás cuando quieras</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== EL PROBLEMA ===== -->
   <section class="section-problem" id="problema">
     <div class="container">
       <div class="section-top">
@@ -140,7 +117,6 @@
         <h2 class="section-heading">El lunes vuelve a aparecer la misma planilla.</h2>
         <p>No hace falta un problema grande para que valga la pena resolverlo — solo que se repita todas las semanas.</p>
       </div>
-
       <div class="problem-grid">
         <article class="card problem-card">
           <div class="badge-icon">
@@ -167,7 +143,6 @@
     </div>
   </section>
 
-  <!-- ===== CÓMO FUNCIONA ===== -->
   <section class="section-services" id="como-funciona">
     <div class="container">
       <div class="section-top">
@@ -175,7 +150,6 @@
         <h2 class="section-heading">Tres pasos, sin licencias nuevas ni abono mensual.</h2>
         <p>Corre dentro de tu mismo Excel. No hace falta instalar ni pagar nada adicional.</p>
       </div>
-
       <div class="phase-grid phase-grid-3">
         <article class="card phase-card">
           <div class="phase-num">Paso 1</div>
@@ -199,14 +173,12 @@
     </div>
   </section>
 
-  <!-- ===== PARA QUIÉN ES ===== -->
   <section class="section-audience" id="para-quien">
     <div class="container">
       <div class="section-top">
         <div class="eyebrow" style="margin-bottom:14px;">Para quién es</div>
         <h2 class="section-heading">Oficinas chicas con tareas que se repiten cada semana.</h2>
       </div>
-
       <div class="audience-grid">
         <article class="card audience-card">
           <span class="pill pill-industry" style="align-self:flex-start;">Contadores</span>
@@ -227,29 +199,20 @@
     </div>
   </section>
 
-  <!-- ===== CONTACTO ===== -->
   <section class="section-contact" id="contacto">
     <div class="container contact-grid">
-
       <div class="contact-intro">
         <div class="eyebrow" style="margin-bottom:14px;">Contacto</div>
         <h2 class="section-heading">¿Hay algo que hacés todas las semanas a mano?</h2>
-        <p class="about-copy" style="max-width:420px;">
-          Completá el formulario y te digo, sin cargo, si tiene sentido automatizarlo.
-        </p>
+        <p class="about-copy" style="max-width:420px;">Completá el formulario y te digo, sin cargo, si tiene sentido automatizarlo.</p>
       </div>
-
       <div class="form-card">
-        <div class="form-note">
-          📎 Este formulario arma un mensaje de WhatsApp con los datos que cargues.
-        </div>
-
-        <form id="contacto-form">
+        <div class="form-note">📎 Este formulario arma un mensaje de WhatsApp con los datos que cargues.</div>
+        <form id="contacto-form" data-intro="Hola, quiero automatizar una tarea en Excel.">
           <div class="field">
             <label for="nombre">Nombre y apellido</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
           </div>
-
           <div class="field">
             <label for="area">¿Qué tarea querés automatizar?</label>
             <select id="area" name="area" required>
@@ -261,27 +224,21 @@
               <option value="No estoy segura/o, quiero que me asesoren">No estoy segura/o, quiero que me asesoren</option>
             </select>
           </div>
-
           <div class="field">
             <label for="detalle">Contanos brevemente tu consulta (opcional)</label>
             <textarea id="detalle" name="detalle" rows="3" placeholder="Ej: todos los lunes cargo a mano los comprobantes de la semana en una planilla"></textarea>
           </div>
-
-          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
-            Enviar por WhatsApp
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Enviar por WhatsApp
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </button>
-
           <div class="form-disclaimer">Al enviar, se abre WhatsApp con tus datos precargados en el mensaje. La respuesta y el diagnóstico inicial son sin cargo.</div>
         </form>
       </div>
-
     </div>
   </section>
 
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
@@ -290,16 +247,18 @@
         <span class="footer-brand">Espar <span>Co.</span></span>
       </a>
       <p class="footer-tagline">
-        Automatización de tareas repetitivas en Excel para oficinas chicas — sin licencias nuevas, sin abono mensual.
+        Ingeniería Industrial + Ciencia de Datos, aplicada a tres problemas distintos: PyMEs, comercios de barrio y equipos chicos.
       </p>
     </div>
     <div>
       <div class="footer-col-title">Navegación</div>
       <div class="footer-links">
         <a href="../">Inicio</a>
-        <a href="#problema">El problema</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#para-quien">Para quién es</a>
+        <a href="../pymes/">PyMEs</a>
+        <a href="../comercios/">Comercios de barrio</a>
+        <a href="../automatizaciones/">Automatización</a>
+        <a href="../sobre-mi/">Sobre mí</a>
+        <a href="../proyectos/">Portafolio</a>
       </div>
     </div>
     <div>
@@ -319,7 +278,7 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; 2026 Espar Co. — Data and Business Solutions.</p>
+    <p>© 2026 Espar Co. — Data and Business Solutions.</p>
   </div>
 </footer>
 
@@ -331,28 +290,7 @@
 </a>
 
 <script src="../assets/js/main.js"></script>
-<script>
-(function () {
-  var WHATSAPP_NUMBER = '5491141889724';
-  document.addEventListener('DOMContentLoaded', function () {
-    var form = document.getElementById('contacto-form');
-    if (!form) return;
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      var nombre = document.getElementById('nombre').value.trim();
-      var area = document.getElementById('area').value;
-      var detalle = document.getElementById('detalle').value.trim();
-      var lineas = [
-        'Hola, quiero automatizar una tarea en Excel.',
-        'Nombre: ' + (nombre || 'Sin especificar'),
-        'Tarea: ' + (area || 'Sin especificar')
-      ];
-      if (detalle) lineas.push('Detalle: ' + detalle);
-      var mensaje = encodeURIComponent(lineas.join('\n'));
-      window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + mensaje, '_blank', 'noopener');
-    });
-  });
-})();
-</script>
+<script src="../assets/js/contacto.js"></script>
+
 </body>
 </html>
