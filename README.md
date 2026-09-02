@@ -42,3 +42,26 @@ CNAME                    → dominio, no tocar
 - Portafolio: falta sumar casos reales a medida que los vaya cerrando. Faryco y España
   Cotrone ya están cargados; "Compra en tu Barrio" (el proyecto para la Cámara de Comercio
   de Rafael Calzada) todavía no tiene link, va como "en desarrollo".
+
+
+## Reorganización en 3 caminos (1/9/2026)
+
+El sitio pasó de ser un solo home a un hub con 3 verticales, cada una con su propia página:
+
+```
+index.html                    → hub: 3 tarjetas (PyMEs / Comercios / Automatización)
+pymes/index.html               → ex-home: servicios en fases, portafolio (Tenaris, SistDeRec, cortes-enre), sobre mí, contacto
+comercios/index.html           → ex-sección "Desarrollo Web": etapas, portafolio (Faryco, España Cotrone, Compra en tu Barrio), contacto
+automatizaciones/index.html    → nueva línea: automatización puntual de Excel/VBA para oficinas chicas (contadores, inmobiliarias), pensada para vender por LinkedIn
+proyectos/index.html           → portafolio completo, sin cambios de contenido (solo nav actualizada)
+```
+
+Todas comparten `assets/css/style.css` y `assets/js/main.js` (menú mobile). `contacto.js` lo siguen usando
+pymes/ y comercios/ tal cual (el mensaje de WhatsApp se arma con lo que cargue el usuario, no depende de
+las opciones del select). automatizaciones/ tiene su propio script de contacto inline porque el mensaje
+de WhatsApp es distinto ("quiero automatizar una tarea en Excel").
+
+Pendiente:
+- Revisar que todos los links internos (portafolio, footer) sigan apuntando bien después de mover archivos
+- El WhatsApp (5491141889724) es el mismo número para las 3 verticales — decidir si conviene separarlo
+- automatizaciones/ todavía no tiene casos propios en el portafolio (es la línea más nueva)
