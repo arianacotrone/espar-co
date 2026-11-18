@@ -72,9 +72,13 @@ Pendiente:
   lila `#AFA9EC` y hueso `#F1EFE8`. Todo vive en `:root` de `style.css`.
 - Las variables ahora se llaman por ROL (`--brand`, `--accent`, `--accent-text`, `--grafito`…),
   no por color. Si la paleta cambia otra vez, se tocan solo esos valores.
-- OJO con el naranja: `--accent` (#EE6718) da 3.2:1 sobre blanco → solo para cosas grandes
-  (puntos, bordes, el "Co." del logo). Para texto chico y links va `--accent-text` (#B44A0C, 5.4:1).
-- Logo, ícono y favicon recoloreados a ciruela/naranja (mismo diseño de la "C" con circuito).
+- El LOGO y el NOMBRE van solo en violeta: ciruela + violeta medio `--brand-soft` (#6E5FC9).
+  Nunca naranja ahí. Logo, ícono y favicon recoloreados así (misma "C" con circuito).
+- El naranja es solo para RESALTAR poquitas cosas: la sección de Calzada Digital, el pill
+  "Nuevo", el "En línea" del portafolio y la flecha del hero de /comercios.
+  `--accent` (#EE6718) da 3.2:1 sobre blanco → solo detalles grandes; si va en texto chico,
+  usar `--accent-text` (#B44A0C, 5.4:1).
+- Links, eyebrows y "Etapa/Fase" usan `--brand-soft`.
 - Footer en grafito para que no se funda con la sección violeta de Calzada.
 - Calzada Digital (`.section-calzada`): mismo bloque en la home (abajo de las 3 tarjetas, con un
   pill "Nuevo" arriba que salta ahí) y en /comercios (antes de "Cómo trabajo"). Si se cambia el
