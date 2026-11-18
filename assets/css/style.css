@@ -953,17 +953,19 @@ a:hover { color: var(--brand); }
 .calzada-credit strong { color: var(--white); font-weight: 600; }
 
 /* Dato destacado: número grande en naranja + explicación al lado */
+/* Contenedor de los datos: grilla de 2 columnas iguales (en el celular, una abajo de la otra) */
+.calzada-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 0 0 30px; max-width: 580px; }
 .calzada-stat {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 16px;
-  margin: 0 0 30px;
-  padding: 14px 22px 14px 18px;
+  margin: 0;
+  padding: 14px 18px;
   border-radius: 12px;
   background: rgba(255, 255, 255, .08);
   border: 1px solid rgba(255, 255, 255, .16);
 }
-.calzada-stat-num { font-size: 40px; font-weight: 800; line-height: 1; color: var(--accent); letter-spacing: -.02em; }
+.calzada-stat-num { font-size: 34px; font-weight: 800; line-height: 1; color: var(--accent); letter-spacing: -.02em; }
 .calzada-stat-label { font-size: 14.5px; line-height: 1.4; color: rgba(255, 255, 255, .9); }
 .calzada-stat-label strong { color: var(--white); }
 
@@ -1013,4 +1015,5 @@ a:hover { color: var(--brand); }
   .section-calzada { padding: 72px 0; }
   .section-calzada h2 { font-size: 30px; }
   .calzada-features { grid-template-columns: 1fr; }
+  .calzada-stats { grid-template-columns: 1fr; }
 }
