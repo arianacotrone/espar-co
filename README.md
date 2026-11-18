@@ -65,3 +65,19 @@ Pendiente:
 - Revisar que todos los links internos (portafolio, footer) sigan apuntando bien después de mover archivos
 - El WhatsApp (5491141889724) es el mismo número para las 3 verticales — decidir si conviene separarlo
 - automatizaciones/ todavía no tiene casos propios en el portafolio (es la línea más nueva)
+
+## Paleta nueva + Calzada Digital protagonista (18/11/2026)
+
+- Colores: ciruela `#4A2E8C` (principal) + naranja `#EE6718` (acento), con grafito `#2C2C2A`,
+  lila `#AFA9EC` y hueso `#F1EFE8`. Todo vive en `:root` de `style.css`.
+- Las variables ahora se llaman por ROL (`--brand`, `--accent`, `--accent-text`, `--grafito`…),
+  no por color. Si la paleta cambia otra vez, se tocan solo esos valores.
+- OJO con el naranja: `--accent` (#EE6718) da 3.2:1 sobre blanco → solo para cosas grandes
+  (puntos, bordes, el "Co." del logo). Para texto chico y links va `--accent-text` (#B44A0C, 5.4:1).
+- Logo, ícono y favicon recoloreados a ciruela/naranja (mismo diseño de la "C" con circuito).
+- Footer en grafito para que no se funda con la sección violeta de Calzada.
+- Calzada Digital (`.section-calzada`): mismo bloque en la home (abajo de las 3 tarjetas, con un
+  pill "Nuevo" arriba que salta ahí) y en /comercios (antes de "Cómo trabajo"). Si se cambia el
+  texto o el dibujo, cambiarlo en las DOS páginas.
+- La ilustración del celular es un dibujo SVG, no una captura: no muestra comercios ni datos reales.
+- En /proyectos la card de Calzada va primera, destacada y "En línea" (ya no "En desarrollo").
